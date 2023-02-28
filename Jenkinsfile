@@ -21,6 +21,7 @@ pipeline {
 				branch '23Q1'
 			}
 				steps {
+					sh 'chmod 777 /mnt/23Q1/index.html'
 					sh 'docker run -itdp 80:80 --name 23Q1 httpd'
 					sh 'docker cp /mnt/23Q1/index.html 23Q1:/usr/local/apache2/htdocs'
 				}
