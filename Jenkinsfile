@@ -29,9 +29,9 @@ pipeline {
 					dir ('/mnt/23Q2') {
 					sh 'rm -rf /mnt/23Q2/*'
 					sh 'git clone https://github.com/iamrealvikrant/practicle.git -b 23Q2' 
-					sh 'chmod 777 /mnt/23Q2/index.html'
+					sh 'chmod 777 /mnt/23Q2/practicle/index.html'
 					sh 'docker run -itdp 90:80 --name 23Q2 httpd'
-					sh 'docker cp /mnt/23Q2/index.html 23Q2:/usr/local/apache2/htdocs'
+					sh 'docker cp /mnt/23Q2/practicle/index.html 23Q2:/usr/local/apache2/htdocs'
 					}
 				}
 
@@ -41,9 +41,9 @@ pipeline {
 					dir ('/mnt/23Q3') {
 					sh 'rm -rf /mnt/23Q3/*'
 					sh 'git clone https://github.com/iamrealvikrant/practicle.git -b 23Q3'
-					sh 'chmod 777 /mnt/23Q3/index.html'
+					sh 'chmod 777 /mnt/23Q3/practicle/index.html'
 					sh 'docker run -itdp 81:80 --name 23Q3 httpd'
-					sh 'docker cp /mnt/23Q3/index.html 23Q3:/usr/local/apache2/htdocs'
+					sh 'docker cp /mnt/23Q3/practicle/index.html 23Q3:/usr/local/apache2/htdocs'
 				}
 				}
 
